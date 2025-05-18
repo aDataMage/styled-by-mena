@@ -1,0 +1,80 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { gsap } from "gsap";
+import { Button } from "@/components/ui/button";
+
+export function HeroSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const text = textRef.current;
+
+    if (container && text) {
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        container,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.2, ease: "power2.out" }
+      );
+
+      tl.fromTo(
+        text.children,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.2, duration: 0.8, ease: "power3.out" },
+        "-=0.8"
+      );
+    }
+  }, []);
+
+  return (
+    <div
+      className="relative h-screen w-full overflow-hidden"
+      ref={containerRef}
+    >
+      <Image
+        src="/placeholder.svg?height=1080&width=1920"
+        alt="Elegant woman in minimalist fashion"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      <div className="absolute inset-0 bg-black/20" />
+
+      <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="max-w-3xl text-center text-white" ref={textRef}>
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-6">
+            Timeless Elegance for the Modern Woman
+          </h1>
+          <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto">
+            Discover our curated collection of sustainable, minimalist fashion
+            designed to elevate your everyday style.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-black hover:bg-white/90 dark:bg-primary dark:text-white"
+            >
+              <Link href="/products">Shop Collection</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white/10"
+            >
+              <Link href="/about">Our Story</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
