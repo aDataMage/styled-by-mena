@@ -165,8 +165,13 @@ async function getArticle(id: string) {
   return articles[id as keyof typeof articles];
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const article = await getArticle(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const resolvedParams = await params;
+  const article = await getArticle(resolvedParams.id);
 
   if (!article) {
     return {
@@ -183,9 +188,11 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 export default async function ArticlePage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const article = await getArticle(params.id);
+  const resolvedParams = await params;
+  const article = await getArticle(resolvedParams.id);
 
   if (!article) {
     notFound();

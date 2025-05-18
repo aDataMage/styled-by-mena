@@ -127,8 +127,13 @@ async function getLookbook(id: string) {
   return lookbooks[id as keyof typeof lookbooks];
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const lookbook = await getLookbook(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const resolvedParams = await params;
+  const lookbook = await getLookbook(resolvedParams.id);
 
   if (!lookbook) {
     return {
@@ -145,9 +150,11 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 export default async function LookbookDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const lookbook = await getLookbook(params.id);
+  const resolvedParams = await params;
+  const lookbook = await getLookbook(resolvedParams.id);
 
   if (!lookbook) {
     notFound();

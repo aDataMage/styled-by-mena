@@ -1,19 +1,22 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { useWishlist, type WishlistItem as WishlistItemType } from "@/contexts/wishlist-context"
-import { useWhatsApp } from "@/contexts/whatsapp-context"
-import { ShoppingBag, X } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  useWishlist,
+  type WishlistItem as WishlistItemType,
+} from "@/contexts/wishlist-context";
+import { useWhatsApp } from "@/contexts/whatsapp-context";
+import { ShoppingBag, X } from "lucide-react";
 
 interface WishlistItemProps {
-  item: WishlistItemType
+  item: WishlistItemType;
 }
 
 export function WishlistItem({ item }: WishlistItemProps) {
-  const { removeFromWishlist } = useWishlist()
-  const { addToCart } = useWhatsApp()
+  const { removeFromWishlist } = useWishlist();
+  const { addToCart } = useWhatsApp();
 
   const handleAddToCart = () => {
     addToCart({
@@ -23,8 +26,8 @@ export function WishlistItem({ item }: WishlistItemProps) {
       color: item.colors[0] || "Default",
       size: "M", // Default size
       quantity: 1,
-    })
-  }
+    });
+  };
 
   return (
     <div className="group relative bg-card rounded-lg overflow-hidden border border-border transition-all duration-300 hover:shadow-md">
@@ -38,13 +41,20 @@ export function WishlistItem({ item }: WishlistItemProps) {
 
       <Link href={`/products/${item.id}`} className="block">
         <div className="aspect-[3/4] relative">
-          <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
+          <Image
+            src={item.image || "/placeholder.svg"}
+            alt={item.name}
+            fill
+            className="object-cover"
+          />
         </div>
       </Link>
 
       <div className="p-4">
         <Link href={`/products/${item.id}`} className="block">
-          <h3 className="font-medium mb-1 hover:text-accent-gold transition-colors">{item.name}</h3>
+          <h3 className="font-medium mb-1 hover:text-accent-gold transition-colors">
+            {item.name}
+          </h3>
         </Link>
         <p className="text-muted-foreground mb-4">${item.price}</p>
 
@@ -58,11 +68,15 @@ export function WishlistItem({ item }: WishlistItemProps) {
           ))}
         </div>
 
-        <Button onClick={handleAddToCart} variant="elegant" className="w-full gap-2">
+        <Button
+          onClick={handleAddToCart}
+          variant="outline"
+          className="w-full gap-2"
+        >
           <ShoppingBag className="h-4 w-4" />
           Add to Cart
         </Button>
       </div>
     </div>
-  )
+  );
 }

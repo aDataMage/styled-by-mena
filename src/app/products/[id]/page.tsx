@@ -45,7 +45,11 @@ async function getProduct(id: string) {
   return products[id as keyof typeof products];
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const resolvedParams = await params;
   const product = await getProduct(resolvedParams.id);
 
@@ -64,9 +68,11 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 export default async function ProductPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const product = await getProduct(params.id);
+  const resolvedParams = await params;
+  const product = await getProduct(resolvedParams.id);
 
   if (!product) {
     notFound();

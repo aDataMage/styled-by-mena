@@ -1,41 +1,41 @@
-"use client"
+"use client";
 
-import { useRef, useEffect } from "react"
-import Image from "next/image"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ShopTheLook } from "@/components/lookbook/shop-the-look"
+import { useRef, useEffect } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ShopTheLook } from "@/components/lookbook/shop-the-look";
 
 interface LookbookImage {
-  src: string
-  alt: string
-  caption: string
-  productIds: string[]
+  src: string;
+  alt: string;
+  caption: string;
+  productIds: string[];
 }
 
 interface LookbookDetailGalleryProps {
-  images: LookbookImage[]
+  images: LookbookImage[];
 }
 
 export function LookbookDetailGallery({ images }: LookbookDetailGalleryProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const imageRefs = useRef<(HTMLDivElement | null)[]>([])
-  const captionRefs = useRef<(HTMLDivElement | null)[]>([])
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const captionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
-    const container = containerRef.current
-    const imageElements = imageRefs.current.filter(Boolean)
-    const captionElements = captionRefs.current.filter(Boolean)
+    const container = containerRef.current;
+    const imageElements = imageRefs.current.filter(Boolean);
+    const captionElements = captionRefs.current.filter(Boolean);
 
     if (container && imageElements.length && captionElements.length) {
       // Clear any existing animations
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
       // Animate each image with staggered timing and parallax
       imageElements.forEach((image, index) => {
-        const caption = captionElements[index]
+        const caption = captionElements[index];
 
         // Create a timeline for each image-caption pair
         const tl = gsap.timeline({
@@ -44,7 +44,7 @@ export function LookbookDetailGallery({ images }: LookbookDetailGalleryProps) {
             start: "top 75%",
             toggleActions: "play none none reverse",
           },
-        })
+        });
 
         // Image reveal animation
         tl.fromTo(
@@ -55,8 +55,8 @@ export function LookbookDetailGallery({ images }: LookbookDetailGalleryProps) {
             opacity: 1,
             duration: 1,
             ease: "power3.out",
-          },
-        )
+          }
+        );
 
         // Caption animation
         if (caption) {
@@ -69,43 +69,62 @@ export function LookbookDetailGallery({ images }: LookbookDetailGalleryProps) {
               duration: 0.6,
               ease: "power3.out",
             },
-            "-=0.4",
-          )
+            "-=0.4"
+          );
         }
 
         // Parallax effect for the image
-        gsap.to(image.querySelector(".image-parallax"), {
-          y: "-15%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: image,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          },
-        })
-      })
+        if (image) {
+          gsap.to(image.querySelector(".image-parallax"), {
+            y: "-15%",
+            ease: "none",
+            scrollTrigger: {
+              trigger: image,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+        }
+      });
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
-  }, [images])
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [images]);
 
   return (
     <div ref={containerRef} className="space-y-32">
       {images.map((image, index) => (
-        <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div
+          key={index}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
           <div
-            ref={(el) => (imageRefs.current[index] = el)}
-            className={`relative overflow-hidden rounded-lg ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
+            ref={(el) => {
+              imageRefs.current[index] = el;
+            }}
+            className={`relative overflow-hidden rounded-lg ${
+              index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+            }`}
           >
             <div className="aspect-[4/5] relative">
               <div className="image-parallax absolute inset-0 h-[115%]">
-                <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
-            <div ref={(el) => (captionRefs.current[index] = el)} className="mt-4 text-sm text-gray-600 italic">
+            <div
+              ref={(el) => {
+                captionRefs.current[index] = el;
+              }}
+              className="mt-4 text-sm text-gray-600 italic"
+            >
               {image.caption}
             </div>
           </div>
@@ -116,5 +135,5 @@ export function LookbookDetailGallery({ images }: LookbookDetailGalleryProps) {
         </div>
       ))}
     </div>
-  )
+  );
 }

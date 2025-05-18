@@ -234,8 +234,13 @@ async function getCollection(id: string) {
   return collections[id as keyof typeof collections];
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const collection = await getCollection(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const resolvedParams = await params;
+  const collection = await getCollection(resolvedParams.id);
 
   if (!collection) {
     return {
@@ -249,12 +254,18 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
+type CollectionPageProps = {
+  params: Promise<{ id: string }>;
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
 export default async function CollectionPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const collection = await getCollection(params.id);
+  const resolvedParams = await params;
+  const collection = await getCollection(resolvedParams.id);
 
   if (!collection) {
     notFound();
