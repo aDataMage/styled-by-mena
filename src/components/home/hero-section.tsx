@@ -99,8 +99,9 @@ export function HeroSection() {
 
   return (
     <div
-      className="relative h-screen w-full overflow-hidden"
+      className="relative opacity-0 h-screen w-full overflow-hidden"
       ref={containerRef}
+      // data-gsap="hero"
     >
       <Image
         ref={imageRef}
@@ -108,7 +109,7 @@ export function HeroSection() {
         alt="Elegant woman in minimalist fashion"
         fill
         priority
-        className="object-cover"
+        className="object-cover scale-110 grayscale-0"
       />
 
       <div className="absolute inset-0 bg-black/20" />

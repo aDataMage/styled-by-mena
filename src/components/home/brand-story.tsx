@@ -50,7 +50,7 @@ export function BrandStory() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[500px] overflow-hidden" ref={imageRef}>
             <Image
-              src="/placeholder.svg?height=1000&width=800"
+              src="/images/brand.jpg?height=1000&width=800"
               alt="Brand founder in studio"
               fill
               className="object-cover"

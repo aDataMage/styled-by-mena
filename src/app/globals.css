@@ -301,6 +301,11 @@ body {
   @apply text-accent-gold;
 }
 
+[data-gsap="hero"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .gold-border {
   @apply border-accent-gold;
 }

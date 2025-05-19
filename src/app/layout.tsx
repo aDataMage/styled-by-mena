@@ -37,13 +37,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
-        <Analytics />
         <ThemeProvider attribute="class" defaultTheme="light">
           <WhatsAppProvider>
             <WishlistProvider>
               <div className="flex min-h-screen flex-col">
                 <Header />
-                <main className="flex-1">{children}</main>
+                <main className="flex-1">
+                  {children}
+                  <Analytics />
+                </main>
                 <Footer />
                 <WhatsAppFloatingButton />
                 <Toaster />
