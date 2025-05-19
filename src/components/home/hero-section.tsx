@@ -4,32 +4,97 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
     const text = textRef.current;
+    const image = imageRef.current;
 
-    if (container && text) {
-      const tl = gsap.timeline();
+    if (!container || !text || !image) return;
 
-      tl.fromTo(
-        container,
-        { opacity: 0 },
-        { opacity: 1, duration: 1.2, ease: "power2.out" }
-      );
+    // Create a GSAP context for easy cleanup
+    const ctx = gsap.context(() => {
+      // Initial setup
+      gsap.set([image, container, text.children], {
+        opacity: 0,
+      });
+      gsap.set(image, {
+        scale: 1.2,
+        filter: "grayscale(0%)",
+      });
 
-      tl.fromTo(
-        text.children,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.2, duration: 0.8, ease: "power3.out" },
-        "-=0.8"
-      );
-    }
+      // Initial animation timeline
+      const initTl = gsap.timeline();
+      initTl
+        .to(image, {
+          scale: 1,
+          opacity: 1,
+          filter: "grayscale(70%) contrast(1.2) blur(5px)",
+          duration: 1.2,
+          ease: "power2.out",
+        })
+        .to(
+          container,
+          {
+            opacity: 1,
+            duration: 1.2,
+            ease: "power2.out",
+          },
+          "-=0.8"
+        )
+        .to(
+          text.children,
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.8"
+        );
+
+      // Scroll-triggered animations
+      const scrollTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      scrollTl
+        .to(text, {
+          y: -100,
+          opacity: 0,
+        })
+        .to(
+          image,
+          {
+            scale: 1.2,
+            filter: "grayscale(70%) contrast(1.2) blur(5px)",
+          },
+          0
+        )
+        .to(
+          container,
+          {
+            scale: 0.8,
+          },
+          0
+        );
+    }, container); // <- Scope selector
+
+    return () => ctx.revert(); // <- Cleanup
   }, []);
 
   return (
@@ -38,7 +103,8 @@ export function HeroSection() {
       ref={containerRef}
     >
       <Image
-        src="/placeholder.svg?height=1080&width=1920"
+        ref={imageRef}
+        src="/images/hero-img.jpeg?height=800&width=1920"
         alt="Elegant woman in minimalist fashion"
         fill
         priority

@@ -9,7 +9,7 @@ const timelineEvents = [
     year: "2018",
     title: "Styled By Mena is Founded",
     description:
-      "Emma Laurent establishes Styled By Mena in Paris with a small team of artisans, launching the first collection of 12 essential pieces.",
+      "Mena Osiro establishes Styled By Mena in Paris with a small team of artisans, launching the first collection of 12 essential pieces.",
   },
   {
     year: "2019",

@@ -52,7 +52,7 @@ export function BrandStoryFull() {
           ref={imageRef}
         >
           <Image
-            src="/placeholder.svg?height=1000&width=800"
+            src="/images/brand-story.jpg?height=1000&width=800"
             alt="Styled By Mena atelier in Paris"
             fill
             className="object-cover"
@@ -62,7 +62,7 @@ export function BrandStoryFull() {
         <div ref={contentRef} className="space-y-6">
           <h2 className="font-serif text-2xl md:text-3xl">The Beginning</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Styled By Mena was founded in 2018 by Emma Laurent, a former fashion
+            Styled By Mena was founded in 2018 by Mena Osiro, a former fashion
             editor with a vision to create a brand that embodied the perfect
             balance between minimalist design and luxurious quality. After years
             of witnessing the industry's focus on fast fashion and trend cycles,

@@ -62,7 +62,7 @@ export function BrandStory() {
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Founded in 2018, Styled By Mena was born from a desire to create
               timeless, versatile pieces that transcend seasonal trends. Our
-              founder, Emma Laurent, envisioned a brand that would embody the
+              founder, Mena Osiro, envisioned a brand that would embody the
               perfect balance between minimalist design and luxurious quality.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-8">

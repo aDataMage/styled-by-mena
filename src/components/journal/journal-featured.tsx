@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useRef, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { gsap } from "gsap"
-import { ArrowRight } from "lucide-react"
+import { useRef, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { gsap } from "gsap";
+import { ArrowRight } from "lucide-react";
 
 // Featured article data
 const featuredArticle = {
@@ -16,42 +16,54 @@ const featuredArticle = {
   date: "May 10, 2025",
   image: "/placeholder.svg?height=800&width=1200",
   author: {
-    name: "Emma Laurent",
+    name: "Mena Osiro",
     role: "Founder & Creative Director",
     image: "/placeholder.svg?height=200&width=200",
   },
-}
+};
 
 export function JournalFeatured() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const imageRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = containerRef.current
-    const image = imageRef.current
-    const content = contentRef.current
+    const container = containerRef.current;
+    const image = imageRef.current;
+    const content = contentRef.current;
 
     if (container && image && content) {
-      const tl = gsap.timeline()
+      const tl = gsap.timeline();
 
-      tl.fromTo(container, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" })
-      tl.fromTo(image, { scale: 1.05, opacity: 0 }, { scale: 1, opacity: 1, duration: 1, ease: "power2.out" }, "-=0.6")
+      tl.fromTo(
+        container,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, ease: "power2.out" }
+      );
+      tl.fromTo(
+        image,
+        { scale: 1.05, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1, ease: "power2.out" },
+        "-=0.6"
+      );
       tl.fromTo(
         content.children,
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: "power3.out" },
-        "-=0.8",
-      )
+        "-=0.8"
+      );
     }
-  }, [])
+  }, []);
 
   return (
     <div
       ref={containerRef}
       className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center bg-gray-50 rounded-lg overflow-hidden"
     >
-      <div className="relative h-[400px] lg:h-[500px] overflow-hidden" ref={imageRef}>
+      <div
+        className="relative h-[400px] lg:h-[500px] overflow-hidden"
+        ref={imageRef}
+      >
         <Image
           src={featuredArticle.image || "/placeholder.svg"}
           alt={featuredArticle.title}
@@ -67,7 +79,9 @@ export function JournalFeatured() {
           <span className="text-gray-600">{featuredArticle.date}</span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl mb-4">{featuredArticle.title}</h2>
+        <h2 className="font-serif text-2xl md:text-3xl mb-4">
+          {featuredArticle.title}
+        </h2>
         <p className="text-gray-600 mb-6">{featuredArticle.excerpt}</p>
 
         <div className="flex items-center gap-4 mb-6">
@@ -81,7 +95,9 @@ export function JournalFeatured() {
           </div>
           <div>
             <p className="font-medium text-sm">{featuredArticle.author.name}</p>
-            <p className="text-gray-600 text-xs">{featuredArticle.author.role}</p>
+            <p className="text-gray-600 text-xs">
+              {featuredArticle.author.role}
+            </p>
           </div>
         </div>
 
@@ -93,5 +109,5 @@ export function JournalFeatured() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

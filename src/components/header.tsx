@@ -46,8 +46,8 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          ? "bg-background/70 backdrop-blur-md shadow-sm"
+          : "bg-background/40 backdrop-blur-xs shadow-none"
       }`}
     >
       <div className="container mx-auto px-4 py-4 md:py-6">

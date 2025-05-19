@@ -86,10 +86,10 @@ async function getArticle(id: string) {
       date: "May 10, 2025",
       image: "/placeholder.svg?height=800&width=1600",
       author: {
-        name: "Emma Laurent",
+        name: "Mena Osiro",
         role: "Founder & Creative Director",
         image: "/placeholder.svg?height=200&width=200",
-        bio: "Emma Laurent founded Styled By Mena in 2018 after a decade in the fashion industry. With a background in sustainable textiles and design, she brings a unique perspective on conscious consumption and timeless style.",
+        bio: "Mena Osiro founded Styled By Mena in 2018 after a decade in the fashion industry. With a background in sustainable textiles and design, she brings a unique perspective on conscious consumption and timeless style.",
       },
       relatedProductIds: ["2", "3", "5", "8"],
     },

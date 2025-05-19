@@ -33,8 +33,15 @@ export function FounderSection() {
 
       tl.fromTo(
         image,
-        { x: 50, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+        { x: 50, opacity: 0, scale: 1.1, filter: "blur(5px) grayscale(50%)" },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          filter: "blur(0) grayscale(10%) contrast(1.2)",
+          ease: "power1.out",
+        },
         "-=0.6"
       );
     }
@@ -50,21 +57,21 @@ export function FounderSection() {
         <div ref={contentRef} className="space-y-6 order-2 md:order-1">
           <h2 className="font-serif text-2xl md:text-3xl">Meet Our Founder</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Emma Laurent's journey in fashion began long before Styled By Mena.
+            Mena Osiro's journey in fashion began long before Styled By Mena.
             Born and raised in Paris to a seamstress mother and architect
-            father, Emma developed an early appreciation for both craftsmanship
+            father, Mena developed an early appreciation for both craftsmanship
             and design. After studying fashion design at École de la Chambre
             Syndicale and working as a fashion editor for several prestigious
-            publications, Emma gained a unique perspective on the industry.
+            publications, Mena gained a unique perspective on the industry.
           </p>
           <p className="text-gray-600 dark:text-gray-400">
             "I wanted to create pieces that weren't defined by seasons or
-            trends, but by their quality and timelessness," Emma explains.
+            trends, but by their quality and timelessness," Mena explains.
             "Garments that would become the foundation of a woman's wardrobe for
             years, not just months."
           </p>
           <p className="text-gray-600 dark:text-gray-400">
-            This philosophy guides Emma's approach to design. Each Styled By
+            This philosophy guides Mena's approach to design. Each Styled By
             Mena collection is thoughtfully curated, with every piece designed
             to complement those that came before. The result is a cohesive
             wardrobe that evolves gracefully over time, rather than being
@@ -74,9 +81,7 @@ export function FounderSection() {
             <p className="italic text-gray-700 dark:text-gray-400">
               "Fashion should serve the woman, not the other way around."
             </p>
-            <p className="text-sm text-gray-500 mt-1">
-              — Emma Laurent, Founder
-            </p>
+            <p className="text-sm text-gray-500 mt-1">— Mena Osiro, Founder</p>
           </div>
         </div>
 
@@ -85,8 +90,8 @@ export function FounderSection() {
           ref={imageRef}
         >
           <Image
-            src="/placeholder.svg?height=1200&width=800"
-            alt="Emma Laurent, Founder of Styled By Mena"
+            src="/images/founder.jpg?height=1200&width=800"
+            alt="Mena Osiro, Founder of Styled By Mena"
             fill
             className="object-cover"
           />
