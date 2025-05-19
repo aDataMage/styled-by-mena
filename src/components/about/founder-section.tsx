@@ -33,13 +33,12 @@ export function FounderSection() {
 
       tl.fromTo(
         image,
-        { x: 50, opacity: 0, scale: 1.1, filter: "blur(5px) grayscale(50%)" },
+        { x: 50, opacity: 0, scale: 1.1 },
         {
           x: 0,
           opacity: 1,
           scale: 1,
           duration: 1.2,
-          filter: "blur(0) grayscale(10%) contrast(1.2)",
           ease: "power1.out",
         },
         "-=0.6"

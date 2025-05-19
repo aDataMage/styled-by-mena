@@ -7,6 +7,7 @@ import { WhatsAppProvider } from "@/contexts/whatsapp-context";
 import { WishlistProvider } from "@/contexts/wishlist-context";
 import { WhatsAppFloatingButton } from "@/components/whatsapp/whatsapp-floating-button";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
+        <Analytics />
         <ThemeProvider attribute="class" defaultTheme="light">
           <WhatsAppProvider>
             <WishlistProvider>

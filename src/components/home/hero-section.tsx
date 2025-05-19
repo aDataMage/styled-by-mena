@@ -104,7 +104,7 @@ export function HeroSection() {
     >
       <Image
         ref={imageRef}
-        src="/images/hero-img.jpeg?height=800&width=1920"
+        src="/images/hero-bg.jpg?height=800&width=1920"
         alt="Elegant woman in minimalist fashion"
         fill
         priority

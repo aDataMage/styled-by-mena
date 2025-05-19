@@ -52,7 +52,7 @@ export function BrandStoryFull() {
           ref={imageRef}
         >
           <Image
-            src="/images/brand-story.jpg?height=1000&width=800"
+            src="/images/brand.jpg?height=1000&width=800"
             alt="Styled By Mena atelier in Paris"
             fill
             className="object-cover"
