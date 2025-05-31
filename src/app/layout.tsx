@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Styled By Mena | Modern Fashion Brand",
+  title: "Mena's Atelier | Modern Fashion Brand",
   description:
     "Discover timeless elegance with our curated collection of modern fashion essentials.",
   generator: "v0.dev",

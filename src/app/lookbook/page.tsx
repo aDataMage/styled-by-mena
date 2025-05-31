@@ -3,9 +3,9 @@ import { LookbookStories } from "@/components/lookbook/lookbook-stories";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Lookbook | Styled By Mena",
+  title: "Lookbook | Mena's Atelier",
   description:
-    "Explore our visual stories and editorial photography showcasing Styled By Mena's aesthetic and inspiration.",
+    "Explore our visual stories and editorial photography showcasing Mena's Atelier's aesthetic and inspiration.",
 };
 
 export default function LookbookPage() {

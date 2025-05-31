@@ -18,7 +18,7 @@ async function getArticle(id: string) {
       excerpt:
         "Discover how investing in fewer, higher-quality pieces can reduce your environmental impact while elevating your personal style.",
       content: `
-        <p>In a world of fast fashion and constant trend cycles, the concept of a sustainable wardrobe has emerged as both an ethical choice and a refined approach to personal style. At Styled By Mena, we believe that building a wardrobe with intention is not only better for the planet but also leads to a more satisfying relationship with your clothing.</p>
+        <p>In a world of fast fashion and constant trend cycles, the concept of a sustainable wardrobe has emerged as both an ethical choice and a refined approach to personal style. At Mena's Atelier, we believe that building a wardrobe with intention is not only better for the planet but also leads to a more satisfying relationship with your clothing.</p>
         
         <h2>The Environmental Cost of Fast Fashion</h2>
         
@@ -80,7 +80,7 @@ async function getArticle(id: string) {
         
         <p>Building a sustainable wardrobe is a gradual process, not an overnight transformation. It involves becoming more conscious of your consumption habits, understanding your personal style, and making intentional choices about the garments you bring into your life.</p>
         
-        <p>At Styled By Mena, we're committed to creating pieces that stand the test of time—both in their physical construction and their design aesthetic. We believe that true luxury lies not in constant newness, but in the enduring pleasure of wearing something made with integrity, intention, and care.</p>
+        <p>At Mena's Atelier, we're committed to creating pieces that stand the test of time—both in their physical construction and their design aesthetic. We believe that true luxury lies not in constant newness, but in the enduring pleasure of wearing something made with integrity, intention, and care.</p>
       `,
       category: "Sustainability",
       date: "May 10, 2025",
@@ -89,7 +89,7 @@ async function getArticle(id: string) {
         name: "Mena Osiro",
         role: "Founder & Creative Director",
         image: "/placeholder.svg?height=200&width=200",
-        bio: "Mena Osiro founded Styled By Mena in 2018 after a decade in the fashion industry. With a background in sustainable textiles and design, she brings a unique perspective on conscious consumption and timeless style.",
+        bio: "Mena Osiro founded Mena's Atelier in 2018 after a decade in the fashion industry. With a background in sustainable textiles and design, she brings a unique perspective on conscious consumption and timeless style.",
       },
       relatedProductIds: ["2", "3", "5", "8"],
     },
@@ -99,7 +99,7 @@ async function getArticle(id: string) {
       excerpt:
         "Discover the essential pieces that form the foundation of a versatile and enduring wardrobe that transcends seasonal trends.",
       content: `
-        <p>The concept of a capsule wardrobe—a curated collection of versatile, timeless pieces that can be mixed and matched to create numerous outfits—has gained popularity as more people embrace mindful consumption. At Styled By Mena, we believe in the power of well-chosen essentials that transcend trends and seasons. Here are ten foundational pieces that deserve a place in every considered wardrobe.</p>
+        <p>The concept of a capsule wardrobe—a curated collection of versatile, timeless pieces that can be mixed and matched to create numerous outfits—has gained popularity as more people embrace mindful consumption. At Mena's Atelier, we believe in the power of well-chosen essentials that transcend trends and seasons. Here are ten foundational pieces that deserve a place in every considered wardrobe.</p>
         
         <h2>1. The Tailored Blazer</h2>
         
@@ -147,7 +147,7 @@ async function getArticle(id: string) {
         
         <p>Remember that a true capsule wardrobe evolves thoughtfully over time. Rather than acquiring everything at once, invest gradually in pieces that truly resonate with you and your lifestyle. Each addition should multiply your outfit possibilities rather than simply adding to your closet count.</p>
         
-        <p>At Styled By Mena, we design with this philosophy in mind, creating pieces that integrate seamlessly into a considered wardrobe while offering the quality and craftsmanship to become longtime companions in your style journey.</p>
+        <p>At Mena's Atelier, we design with this philosophy in mind, creating pieces that integrate seamlessly into a considered wardrobe while offering the quality and craftsmanship to become longtime companions in your style journey.</p>
       `,
       category: "Style Advice",
       date: "May 5, 2025",
@@ -175,12 +175,12 @@ export async function generateMetadata({
 
   if (!article) {
     return {
-      title: "Article Not Found | Styled By Mena Journal",
+      title: "Article Not Found | Mena's Atelier Journal",
     };
   }
 
   return {
-    title: `${article.title} | Styled By Mena Journal`,
+    title: `${article.title} | Mena's Atelier Journal`,
     description: article.excerpt,
   };
 }

@@ -56,7 +56,7 @@ export function FounderSection() {
         <div ref={contentRef} className="space-y-6 order-2 md:order-1">
           <h2 className="font-serif text-2xl md:text-3xl">Meet Our Founder</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Mena Osiro's journey in fashion began long before Styled By Mena.
+            Mena Osiro's journey in fashion began long before Mena's Atelier.
             Born and raised in Paris to a seamstress mother and architect
             father, Mena developed an early appreciation for both craftsmanship
             and design. After studying fashion design at École de la Chambre
@@ -90,7 +90,7 @@ export function FounderSection() {
         >
           <Image
             src="/images/founder.jpg?height=1200&width=800"
-            alt="Mena Osiro, Founder of Styled By Mena"
+            alt="Mena Osiro, Founder of Mena's Atelier"
             fill
             className="object-cover"
           />

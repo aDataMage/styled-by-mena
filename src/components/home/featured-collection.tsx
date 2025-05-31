@@ -5,7 +5,8 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProductCard } from "@/components/products/product-card";
-
+import { useIsMobile } from "../ui/use-mobile";
+import { cn } from "@/lib/utils";
 // Mock data for featured products
 const featuredProducts = [
   {
@@ -46,6 +47,8 @@ export function FeaturedCollection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const productsRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
+  console.log("isMobile", isMobile);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -70,23 +73,50 @@ export function FeaturedCollection() {
         }
       );
 
-      gsap.fromTo(
-        products.children,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.3,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: products,
-            start: "top 75%",
-          },
-        }
-      );
+      if (isMobile) {
+        const cards = gsap.utils.toArray(products.children) as HTMLElement[];
+        const cardCount = cards.length;
+
+        cards.forEach((card, index) => {
+          gsap.set(card, {
+            xPercent: index % 2 === 0 ? -100 : 100,
+            scale: 0.8,
+            opacity: 0,
+          });
+          gsap.to(card, {
+            xPercent: 0,
+            scale: 1,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+              markers: false,
+              once: true,
+            },
+          });
+        });
+      } else {
+        gsap.fromTo(
+          products.children,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.3,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: products,
+              start: "top 75%",
+            },
+          }
+        );
+      }
     }
-  }, []);
+  }, [isMobile]);
 
   const handleAddToFavorites = (id: string) => {
     // Implementation for adding to favorites
@@ -107,7 +137,9 @@ export function FeaturedCollection() {
         </div>
 
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+          className={cn(
+            "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+          )}
           ref={productsRef}
         >
           {featuredProducts.map((product) => (

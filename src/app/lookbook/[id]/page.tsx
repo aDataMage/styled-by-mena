@@ -90,7 +90,7 @@ async function getLookbook(id: string) {
       subtitle:
         "Classic silhouettes reimagined for the modern woman with a focus on craftsmanship",
       description:
-        "Timeless Elegance celebrates the enduring appeal of classic design through a contemporary lens. This editorial highlights the meticulous craftsmanship and thoughtful details that elevate Styled By Mena's pieces beyond trends, creating garments that will be treasured for years to come.",
+        "Timeless Elegance celebrates the enduring appeal of classic design through a contemporary lens. This editorial highlights the meticulous craftsmanship and thoughtful details that elevate Mena's Atelier's pieces beyond trends, creating garments that will be treasured for years to come.",
       heroImage: "/placeholder.svg?height=1080&width=1920",
       images: [
         {
@@ -137,12 +137,12 @@ export async function generateMetadata({
 
   if (!lookbook) {
     return {
-      title: "Lookbook Not Found | Styled By Mena",
+      title: "Lookbook Not Found | Mena's Atelier",
     };
   }
 
   return {
-    title: `${lookbook.title} | Styled By Mena Lookbook`,
+    title: `${lookbook.title} | Mena's Atelier Lookbook`,
     description: lookbook.description,
   };
 }

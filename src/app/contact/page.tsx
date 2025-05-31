@@ -4,7 +4,7 @@ import { Faq } from "@/components/contact/faq";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Contact Us | Styled By Mena",
+  title: "Contact Us | Mena's Atelier",
   description:
     "Get in touch with our team for any questions, collaborations, or customer support.",
 };

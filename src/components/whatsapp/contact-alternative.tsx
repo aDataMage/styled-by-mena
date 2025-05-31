@@ -48,7 +48,7 @@ export function ContactAlternative({ productName }: ContactAlternativeProps) {
           <div>
             <p className="font-medium">Email Us</p>
             <p className="text-gray-600 text-sm">
-              orders@Styled By Menabrand.com
+              orders@Mena's Atelierbrand.com
             </p>
           </div>
         </div>

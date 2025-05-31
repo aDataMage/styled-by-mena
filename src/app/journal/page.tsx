@@ -4,7 +4,7 @@ import { JournalCategories } from "@/components/journal/journal-categories";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Journal | Styled By Mena",
+  title: "Journal | Mena's Atelier",
   description:
     "Explore our journal for style advice, sustainable fashion education, and behind-the-scenes features.",
 };

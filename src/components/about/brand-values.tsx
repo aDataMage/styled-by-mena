@@ -13,7 +13,7 @@ const values = [
   {
     title: "Quality Craftsmanship",
     description:
-      "Every Styled By Mena garment is meticulously crafted using traditional techniques and premium materials, ensuring exceptional quality and longevity.",
+      "Every Mena's Atelier garment is meticulously crafted using traditional techniques and premium materials, ensuring exceptional quality and longevity.",
   },
   {
     title: "Conscious Production",
@@ -82,7 +82,7 @@ export function BrandValues() {
       <div className="text-center mb-12" ref={headingRef}>
         <h2 className="font-serif text-2xl md:text-3xl mb-4">Our Values</h2>
         <p className="text-gray-600  max-w-2xl mx-auto">
-          At Styled By Mena, our values guide every decision we make, from
+          At Mena's Atelier, our values guide every decision we make, from
           design to production to customer experience.
         </p>
       </div>

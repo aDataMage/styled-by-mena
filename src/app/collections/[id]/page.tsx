@@ -172,12 +172,12 @@ async function getCollection(id: string) {
     },
     essentials: {
       id: "essentials",
-      title: "Styled By Mena Essentials",
+      title: "Mena's Atelier Essentials",
       subtitle: "Timeless staples for the modern wardrobe",
       description:
         "Our permanent collection of timeless staples that form the foundation of a considered wardrobe, designed to last for years.",
       story:
-        "Styled By Mena Essentials represents the core of our design philosophy—timeless pieces that transcend seasons and trends. This permanent collection features the foundational garments that every thoughtful wardrobe should include.\n\nEach piece is meticulously crafted from the highest quality materials and designed with a focus on versatility and longevity. The silhouettes are clean and classic, with subtle details that elevate them beyond the ordinary. In a palette of neutrals with occasional muted tones, these pieces are designed to work seamlessly together and with items from our seasonal collections.",
+        "Mena's Atelier Essentials represents the core of our design philosophy—timeless pieces that transcend seasons and trends. This permanent collection features the foundational garments that every thoughtful wardrobe should include.\n\nEach piece is meticulously crafted from the highest quality materials and designed with a focus on versatility and longevity. The silhouettes are clean and classic, with subtle details that elevate them beyond the ordinary. In a palette of neutrals with occasional muted tones, these pieces are designed to work seamlessly together and with items from our seasonal collections.",
       heroImage: "/placeholder.svg?height=1080&width=1920",
       gallery: [
         "/placeholder.svg?height=800&width=600",
@@ -244,12 +244,12 @@ export async function generateMetadata({
 
   if (!collection) {
     return {
-      title: "Collection Not Found | Styled By Mena",
+      title: "Collection Not Found | Mena's Atelier",
     };
   }
 
   return {
-    title: `${collection.title} | Styled By Mena Collections`,
+    title: `${collection.title} | Mena's Atelier Collections`,
     description: collection.description,
   };
 }

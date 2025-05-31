@@ -2,7 +2,7 @@ import { ThemeShowcase } from "@/components/theme-showcase";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Theme Showcase | Styled By Mena",
+  title: "Theme Showcase | Mena's Atelier",
   description:
     "Explore our elegant and prestigious theme designed with color psychology.",
 };

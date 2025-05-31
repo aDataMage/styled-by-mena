@@ -79,7 +79,7 @@ export function Sustainability() {
           Our Commitment to Sustainability
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Sustainability isn't just a buzzword at Styled By Mena—it's woven into
+          Sustainability isn't just a buzzword at Mena's Atelier—it's woven into
           the fabric of everything we do.
         </p>
       </div>
@@ -109,7 +109,7 @@ export function Sustainability() {
           <div>
             <h3 className="font-serif text-xl mb-3">Packaging & Shipping</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              All Styled By Mena packaging is plastic-free and made from
+              All Mena's Atelier packaging is plastic-free and made from
               recycled and recyclable materials. We offset carbon emissions from
               shipping through verified environmental projects.
             </p>
@@ -118,7 +118,7 @@ export function Sustainability() {
           <div>
             <h3 className="font-serif text-xl mb-3">Circularity</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Through our Styled By Mena Renewal program, we offer repair
+              Through our Mena's Atelier Renewal program, we offer repair
               services to extend the life of your garments and recycling options
               for pieces that can no longer be worn, ensuring nothing goes to
               waste.
@@ -132,7 +132,7 @@ export function Sustainability() {
         >
           <Image
             src="/placeholder.svg?height=1200&width=800"
-            alt="Sustainable fabric production for Styled By Mena"
+            alt="Sustainable fabric production for Mena's Atelier"
             fill
             className="object-cover"
           />

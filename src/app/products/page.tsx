@@ -3,7 +3,7 @@ import { ProductFilters } from "@/components/products/product-filters";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Shop All Products | Styled By Mena",
+  title: "Shop All Products | Mena's Atelier",
   description:
     "Browse our collection of timeless, sustainable fashion pieces designed for the modern woman.",
 };

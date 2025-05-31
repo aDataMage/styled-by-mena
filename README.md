@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+| Color Purpose                                  | Shade      | Hex Code  |
+| ---------------------------------------------- | ---------- | --------- |
+| **Primary** (confidence, elegance)             | Deep Plum  | `#4A154B` |
+| **Accent** (femininity, youth, charm)          | Soft Rose  | `#F7C1BB` |
+| **Contrast** (strength, gender-neutral appeal) | Charcoal   | `#1C1C1E` |
+| **Neutral** (canvas for products)              | Ivory      | `#FDFCFB` |
+| **Highlight** (freshness, creativity)          | Olive Lime | `#A6B91A` |
+

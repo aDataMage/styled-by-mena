@@ -43,7 +43,7 @@ const collections = [
   },
   {
     id: "essentials",
-    title: "Styled By Mena Essentials",
+    title: "Mena's Atelier Essentials",
     description:
       "Our permanent collection of timeless staples that form the foundation of a considered wardrobe.",
     image: "/placeholder.svg?height=800&width=600",

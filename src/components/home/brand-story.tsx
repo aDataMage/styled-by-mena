@@ -60,13 +60,13 @@ export function BrandStory() {
           <div ref={contentRef}>
             <h2 className="font-serif text-3xl md:text-4xl mb-6">Our Story</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Founded in 2018, Styled By Mena was born from a desire to create
+              Founded in 2018, Mena's Atelier was born from a desire to create
               timeless, versatile pieces that transcend seasonal trends. Our
               founder, Mena Osiro, envisioned a brand that would embody the
               perfect balance between minimalist design and luxurious quality.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              Every Styled By Mena piece is thoughtfully designed in our Paris
+              Every Mena's Atelier piece is thoughtfully designed in our Paris
               atelier and ethically crafted using sustainable materials. We
               believe in slow fashion and creating garments that will be
               treasured for years to come.

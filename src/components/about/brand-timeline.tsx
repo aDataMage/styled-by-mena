@@ -7,21 +7,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const timelineEvents = [
   {
     year: "2018",
-    title: "Styled By Mena is Founded",
+    title: "Mena's Atelier is Founded",
     description:
-      "Mena Osiro establishes Styled By Mena in Paris with a small team of artisans, launching the first collection of 12 essential pieces.",
+      "Mena Osiro establishes Mena's Atelier in Paris with a small team of artisans, launching the first collection of 12 essential pieces.",
   },
   {
     year: "2019",
     title: "First Flagship Store",
     description:
-      "Styled By Mena opens its first flagship store in the Marais district of Paris, designed to reflect the brand's minimalist aesthetic.",
+      "Mena's Atelier opens its first flagship store in the Marais district of Paris, designed to reflect the brand's minimalist aesthetic.",
   },
   {
     year: "2020",
     title: "Sustainable Materials Initiative",
     description:
-      "Styled By Mena commits to using only sustainable and ethically sourced materials across all collections, partnering with certified suppliers.",
+      "Mena's Atelier commits to using only sustainable and ethically sourced materials across all collections, partnering with certified suppliers.",
   },
   {
     year: "2021",
@@ -33,25 +33,25 @@ const timelineEvents = [
     year: "2022",
     title: "Artisan Collaboration Program",
     description:
-      "Styled By Mena launches a program supporting traditional craftsmanship, collaborating with artisans from around the world.",
+      "Mena's Atelier launches a program supporting traditional craftsmanship, collaborating with artisans from around the world.",
   },
   {
     year: "2023",
     title: "Circular Fashion Commitment",
     description:
-      "Introduction of the Styled By Mena Renewal program, offering repair services and recycling options for all Styled By Mena garments.",
+      "Introduction of the Mena's Atelier Renewal program, offering repair services and recycling options for all Mena's Atelier garments.",
   },
   {
     year: "2024",
     title: "Carbon Neutral Certification",
     description:
-      "Styled By Mena achieves carbon neutrality across all operations through reduction initiatives and carefully selected offset programs.",
+      "Mena's Atelier achieves carbon neutrality across all operations through reduction initiatives and carefully selected offset programs.",
   },
   {
     year: "2025",
     title: "Looking Forward",
     description:
-      "With a growing community and expanding collection, Styled By Mena continues its commitment to timeless design and responsible fashion.",
+      "With a growing community and expanding collection, Mena's Atelier continues its commitment to timeless design and responsible fashion.",
   },
 ];
 
@@ -132,7 +132,7 @@ export function BrandTimeline() {
         <h2 className="font-serif text-2xl md:text-3xl mb-4">Our Journey</h2>
         <p className="text-gray-600 max-w-2xl mx-auto ">
           From our humble beginnings to where we are today, explore the key
-          milestones that have shaped Styled By Mena.
+          milestones that have shaped Mena's Atelier.
         </p>
       </div>
 

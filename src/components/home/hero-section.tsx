@@ -89,6 +89,7 @@ export function HeroSection() {
           container,
           {
             scale: 0.8,
+            transform: "rotateX(100deg)",
           },
           0
         );
@@ -116,8 +117,10 @@ export function HeroSection() {
 
       <div className="absolute inset-0 flex items-center justify-center px-4">
         <div className="max-w-3xl text-center text-white" ref={textRef}>
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-6">
-            Timeless Elegance for the Modern Woman
+          <h1 className="heading text-4xl md:text-6xl lg:text-7xl mb-6">
+            Timeless{" "}
+            <span className="dark:text-foreground text-neutral">Elegance</span>{" "}
+            for the Modern Woman
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto">
             Discover our curated collection of sustainable, minimalist fashion

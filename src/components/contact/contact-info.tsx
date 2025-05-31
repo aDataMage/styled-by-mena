@@ -56,7 +56,7 @@ export function ContactInfo() {
             <Mail className="h-5 w-5 text-gray-500 mt-0.5" />
             <div>
               <p className="font-medium">Email</p>
-              <p className="text-gray-600">hello@Styled By Menabrand.com</p>
+              <p className="text-gray-600">hello@Mena's Atelierbrand.com</p>
             </div>
           </li>
 

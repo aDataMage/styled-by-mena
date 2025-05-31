@@ -55,12 +55,12 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | Styled By Mena",
+      title: "Product Not Found | Mena's Atelier",
     };
   }
 
   return {
-    title: `${product.name} | Styled By Mena`,
+    title: `${product.name} | Mena's Atelier`,
     description: product.description,
   };
 }

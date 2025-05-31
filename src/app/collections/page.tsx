@@ -3,7 +3,7 @@ import { FeaturedCollection } from "@/components/collections/featured-collection
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Collections | Styled By Mena",
+  title: "Collections | Mena's Atelier",
   description:
     "Explore our seasonal and thematic collections, each telling a unique story through timeless design.",
 };
@@ -17,7 +17,7 @@ export default function CollectionsPage() {
             Our Collections
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Each Styled By Mena collection tells a unique story, inspired by
+            Each Mena's Atelier collection tells a unique story, inspired by
             art, architecture, and the modern woman's evolving lifestyle.
           </p>
         </div>

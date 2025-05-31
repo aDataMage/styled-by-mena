@@ -197,7 +197,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>How to Purchase from Styled By Mena</DialogTitle>
+            <DialogTitle>How to Purchase from Mena's Atelier</DialogTitle>
             <DialogDescription>
               We use WhatsApp Business to provide personalized service and a
               seamless shopping experience.

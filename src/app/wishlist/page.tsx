@@ -2,9 +2,9 @@ import { WishlistContent } from "@/components/wishlist/wishlist-content";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Wishlist | Styled By Mena",
+  title: "Wishlist | Mena's Atelier",
   description:
-    "View and manage your saved items in your Styled By Mena wishlist.",
+    "View and manage your saved items in your Mena's Atelier wishlist.",
 };
 
 export default function WishlistPage() {

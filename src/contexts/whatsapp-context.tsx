@@ -108,7 +108,7 @@ export function WhatsAppProvider({ children }: { children: ReactNode }) {
 
   const openWhatsApp = (productInfo?: string) => {
     const phoneNumber = "+2349091354958"; // Replace with your actual WhatsApp Business number
-    let message = "Hello, I'm interested in purchasing from Styled By Mena.";
+    let message = "Hello, I'm interested in purchasing from Mena's Atelier.";
 
     if (cart.length > 0) {
       message += "\n\n*My Order:*\n";

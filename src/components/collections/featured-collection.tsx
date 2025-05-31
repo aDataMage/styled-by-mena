@@ -6,6 +6,7 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { Button } from "@/components/ui/button";
 
+
 // Mock data for the featured collection
 const featuredCollection = {
   id: "summer-2025",

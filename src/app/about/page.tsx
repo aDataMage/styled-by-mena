@@ -6,9 +6,9 @@ import { Sustainability } from "@/components/about/sustainability";
 import { PageTransition } from "@/components/ui/page-transition";
 
 export const metadata = {
-  title: "Our Story | Styled By Mena",
+  title: "Our Story | Mena's Atelier",
   description:
-    "Discover the story, values, and journey behind Styled By Mena - a modern fashion brand committed to timeless elegance and sustainability.",
+    "Discover the story, values, and journey behind Mena's Atelier - a modern fashion brand committed to timeless elegance and sustainability.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
           <h1 className="font-serif text-3xl md:text-4xl mb-4">Our Story</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Founded on principles of timeless design and sustainable
-            craftsmanship, Styled By Mena represents the perfect balance between
+            craftsmanship, Mena's Atelier represents the perfect balance between
             elegance and responsibility.
           </p>
         </div>

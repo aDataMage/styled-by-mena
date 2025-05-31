@@ -9,10 +9,13 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { useMobile } from "@/hooks/use-mobile";
 import { useWhatsApp } from "@/contexts/whatsapp-context";
 import { useWishlist } from "@/contexts/wishlist-context";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { resolvedTheme } = useTheme();
   const pathname = usePathname();
   const isMobile = useMobile();
   const { itemCount } = useWhatsApp();
@@ -54,9 +57,18 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="font-serif text-2xl md:text-3xl tracking-wider gold-hover"
+            className="font-serif text-2xl md:text-3xl tracking-wider gold-hover flex items-center gap-2"
           >
-            Styled By Mena
+            <Image
+              src={`/images/${
+                resolvedTheme == "dark" ? "logo_dark.svg" : "logo_light.svg"
+              }?height=100&width=100`}
+              alt="Brand-Logo"
+              width={50}
+              height={50}
+              priority
+            />
+            <p className="logo">Mena's Atelier</p>
           </Link>
 
           {/* Desktop Navigation */}

@@ -53,7 +53,7 @@ export function BrandStoryFull() {
         >
           <Image
             src="/images/brand.jpg?height=1000&width=800"
-            alt="Styled By Mena atelier in Paris"
+            alt="Mena's Atelier atelier in Paris"
             fill
             className="object-cover"
           />
@@ -62,7 +62,7 @@ export function BrandStoryFull() {
         <div ref={contentRef} className="space-y-6">
           <h2 className="font-serif text-2xl md:text-3xl">The Beginning</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Styled By Mena was founded in 2018 by Mena Osiro, a former fashion
+            Mena's Atelier was founded in 2018 by Mena Osiro, a former fashion
             editor with a vision to create a brand that embodied the perfect
             balance between minimalist design and luxurious quality. After years
             of witnessing the industry's focus on fast fashion and trend cycles,
@@ -71,14 +71,14 @@ export function BrandStoryFull() {
           </p>
           <p className="text-gray-600 dark:text-gray-400">
             The journey began in a small atelier in Paris, where Emma and a
-            small team of skilled artisans created the first Styled By Mena
+            small team of skilled artisans created the first Mena's Atelier
             collection. Inspired by the clean lines of modernist architecture
             and the timeless elegance of Parisian style, the collection quickly
             gained recognition for its refined simplicity and exceptional
             craftsmanship.
           </p>
           <p className="text-gray-600 dark:text-gray-400">
-            Today, Styled By Mena has grown into a respected name in the fashion
+            Today, Mena's Atelier has grown into a respected name in the fashion
             industry, known for creating versatile, high-quality pieces that
             transcend seasonal trends. While we've expanded, our core philosophy
             remains unchanged: to create thoughtfully designed garments that

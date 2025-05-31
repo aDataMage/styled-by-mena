@@ -58,7 +58,7 @@ export function LookbookHero() {
       <div className="absolute inset-0" ref={imageRef}>
         <Image
           src="/placeholder.svg?height=1080&width=1920"
-          alt="Styled By Mena Lookbook"
+          alt="Mena's Atelier Lookbook"
           fill
           priority
           className="object-cover"

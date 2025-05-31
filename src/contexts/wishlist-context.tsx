@@ -36,7 +36,7 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 
   // Load wishlist from localStorage on initial render
   useEffect(() => {
-    const savedWishlist = localStorage.getItem("Styled By Mena-wishlist");
+    const savedWishlist = localStorage.getItem("Mena's Atelier-wishlist");
     if (savedWishlist) {
       try {
         const parsedWishlist = JSON.parse(savedWishlist);
@@ -50,7 +50,7 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 
   // Save wishlist to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem("Styled By Mena-wishlist", JSON.stringify(wishlist));
+    localStorage.setItem("Mena's Atelier-wishlist", JSON.stringify(wishlist));
     setWishlistCount(wishlist.length);
   }, [wishlist]);
 

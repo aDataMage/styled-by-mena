@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="font-serif text-xl mb-4">Styled By Mena</h3>
+            <h3 className="font-serif text-xl mb-4">Mena's Atelier</h3>
             <p className="text-sm text-gray-600 mb-4 max-w-xs dark:text-gray-300">
               Timeless elegance for the modern woman. Sustainable, ethical
               fashion designed to last.
