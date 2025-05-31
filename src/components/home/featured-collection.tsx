@@ -124,7 +124,7 @@ export function FeaturedCollection() {
   };
 
   return (
-    <section className="py-20 md:py-28" ref={sectionRef}>
+    <section className="py-20 md:py-28 overflow-x-clip" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16" ref={headingRef}>
           <h2 className="font-serif text-3xl md:text-4xl mb-4">
